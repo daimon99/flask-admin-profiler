@@ -39,7 +39,7 @@ def repr_str(obj):
     return _format_str(obj)
 
 
-@repr_handler(unicode)
+@repr_handler(str)
 def repr_unicode(obj):
     return _format_str(obj)
 

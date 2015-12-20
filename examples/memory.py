@@ -27,7 +27,7 @@ def index():
 
 @app.route('/leak/')
 def leak():
-    for _ in xrange(10000):
+    for _ in range(10000):
         _global_leak.append(Leaky())
 
     return HTML_PAYLOAD
@@ -41,4 +41,4 @@ admin.init_app(app)
 
 if __name__ == '__main__':
     # Start app
-    app.run()
+    app.run(host='0.0.0.0', port=8000)
